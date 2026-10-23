@@ -20,6 +20,8 @@ from datetime import datetime, timedelta
 from typing import Any, List, Optional, Tuple
 from urllib.parse import parse_qs, urljoin, urlparse
 
+__version__ = "0.1.0"
+
 CACHE_PATH = os.environ.get(
     "MYAREA_TOKEN_FILE", os.path.expanduser("~/.cache/myarea_tm_token.json")
 )
@@ -1133,6 +1135,7 @@ def main() -> int:
         description="MyArea Cartellino via API (niente browser).",
         epilog=HELP,
     )
+    ap.add_argument("--version", action="version", version="myarea_tm %s" % __version__)
     ap.add_argument("--year", type=int, default=None, help="default: anno corrente")
     ap.add_argument("--month", type=int, default=None, help="default: mese corrente")
     ap.add_argument("--login-only", action="store_true")

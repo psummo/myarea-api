@@ -10,6 +10,8 @@ export MYAREA_USER=... MYAREA_PASS=...
 python3 myarea_tm.py --help
 ```
 
+Versione corrente: 0.1.0 (`python3 myarea_tm.py --version`).
+
 Il JWT viene salvato in `~/.cache/myarea_tm_token.json` (override con `MYAREA_TOKEN_FILE`).
 
 Funzioni principali: elenco richieste, creazione/cancellazione di SMWO, ROL e FERIE,
